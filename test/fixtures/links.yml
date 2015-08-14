@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slug: MyString
+  clicks: 1
+  snapshot: MyString
+  title: MyString
+
+two:
+  slug: MyString
+  clicks: 1
+  snapshot: MyString
+  title: MyString
