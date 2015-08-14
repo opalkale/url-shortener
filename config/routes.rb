@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   root 'links#new'
 
-  post 'links/new' => 'links#create'
+  resources :links, only:[:new, :create]
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
