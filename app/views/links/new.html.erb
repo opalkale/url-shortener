@@ -1,0 +1,13 @@
+<h1> Add a new URL </h1>
+<%= form_for @short_link do |f| %>
+
+  <p>
+    <%= f.label :link, "Your URL:" %>
+    <%= f.text_field :link %>
+  </p>
+
+  <p class = 'buttons'>
+    <%= f.submit "Shorten my URL" %>
+  </p>
+
+<% end %>

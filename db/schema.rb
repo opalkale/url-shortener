@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(version: 20150813221007) do
 
   create_table "links", force: true do |t|
-    t.string   "long_link"
-    t.string   "short_link"
+    t.string   "link",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
