@@ -5,13 +5,11 @@ class LinksController < ApplicationController
   end
 
   def create
-    @short_link = Link.new(params[:link])
+    @short_link = Link.new(link_params)
     if @short_link.save
-      flash[:short_id] = @short_link.id
-
       redirect_to new_link_url
     else
-      render action: :new
+      render :new
     end
   end
 
@@ -19,5 +17,10 @@ class LinksController < ApplicationController
     @short_link = Link.find(params[:id])
     redirect_to @short_link.link
   end
-  
+
+  private 
+    def link_params
+      params.require(:link).permit(:link)
+    end
+
 end 
